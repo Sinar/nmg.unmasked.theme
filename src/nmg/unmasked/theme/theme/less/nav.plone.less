@@ -1,0 +1,138 @@
+//Styling Navigation
+
+#mainnavigation-wrapper {
+  background-color: @plone-header-bg;
+  padding-bottom: 10px;
+}
+
+#mainnavigation .navbar-header {
+  height: 56px;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+  margin-bottom: 10px;
+
+  & button {
+    background-color: @plone-header-bg;
+    color: white;
+    border: 2px solid white;
+    &:focus {
+      background-color: darken(@plone-header-bg, -15%);
+    }
+  }
+}
+
+#mainnavigation #main-navigation {
+  & a {
+    color: white;
+    font-weight: 600;
+  }
+
+  & .selected {
+    background-color: darken(@plone-header-bg, -15%);
+  }
+}
+
+.plone-nav li label:after {
+  color: white;
+  background: darken(@plone-header-bg, 15%);
+}
+
+.navbar-custom .nav li a {
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.navTree > .navTreeItem {
+  & a {
+    font-weight: 600;
+    color: @OGP-color-primary !important;
+
+    &:hover {
+      color: @OGP-color-secondary !important;
+    }
+  }
+}
+
+[class*="contenttype-"]::before {
+  display: none;
+}
+@media (min-width: @plone-screen-md-min) {
+  #mainnavigation-wrapper {
+    padding: @plone-sitenav-padding-vertical 15px;
+  }
+}
+
+@media (min-width: @plone-screen-sm-min) {
+  #mainnavigation {
+    flex: 1;
+
+    & #main-navigation .selected {
+      margin: 0px;
+    }
+  }
+
+  #mainnavigation-wrapper {
+    background-color: @plone-header-bg;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    padding: @plone-sitenav-padding-vertical 100px;
+  }
+
+  .container-fluid {
+    padding: 0;
+  }
+
+  .navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .plone-navbar-nav {
+    float: right;
+    margin-right: 10px;
+  }
+  .plone-nav li label:after {
+    color: white;
+    background: transparent;
+  }
+
+  .navbar-custom {
+    background: 0 0;
+    border-bottom: 1px solid transparent;
+    border-right: 1px solid white;
+  }
+
+  .navbar-custom .navbar-brand {
+    color: #fff;
+    padding: 20px;
+  }
+  .navbar-custom .navbar-brand:focus,
+  .navbar-custom .navbar-brand:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  .navbar-custom .nav li a {
+    color: #fff;
+    padding: 10px 15px;
+    font-size: @plone-font-size-base !important;
+  }
+
+  .navbar-custom .nav li a:focus,
+  .navbar-custom .nav li a:hover {
+    color: rgba(255, 255, 255, 0.8);
+  }
+
+  .navbar-collapse {
+    display: block !important;
+  }
+
+  .navbar-header {
+    display: none !important;
+  }
+}

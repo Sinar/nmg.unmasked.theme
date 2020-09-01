@@ -1,0 +1,145 @@
+//Styling Main Content
+
+#main-container {
+  margin: 20px 0;
+
+  & a {
+    color: @OGP-color-primary;
+  }
+  & a:hover {
+    color: @OGP-color-secondary;
+  }
+}
+
+#global_statusmessage {
+  width: 100%;
+}
+
+.banner-image {
+  width: 100%;
+}
+
+.section > .portletHeader {
+  display: flex;
+  justify-content: center;
+}
+
+.section {
+  padding-bottom: 15px;
+  border-bottom: 1px solid @OGP-color-primary;
+}
+
+.documentFirstHeading {
+  font-family: @plone-font-family-sans-serif;
+  font-weight: bold;
+  color: @OGP-color-primary;
+}
+
+.summary > [class*="contenttype-"] {
+  font-size: @plone-font-size-h3;
+  font-weight: bold;
+
+  //Hide Listing icon
+  &::before {
+    display: none;
+  }
+}
+
+.summary > a > img {
+  float: left !important;
+  padding: 10px;
+  width: 200px;
+}
+
+.tileImage > a > img {
+  float: left !important;
+  padding: 10px;
+  width: 100px;
+}
+
+.entry {
+  margin: 15px 0;
+  border-bottom: 1px solid @OGP-color-primary;
+}
+
+.newsImageContainer {
+  float: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  //Image Styling for Content
+  & a {
+    width: 100%;
+
+    & img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  //Caption styling
+  & figcaption {
+    padding: 0px 10px;
+    border-left: 1px solid @OGP-color-primary;
+    margin: 10px 50px;
+    font-size: @plone-font-size-base;
+    font-style: italic;
+    color: @OGP-color-primary;
+  }
+}
+
+article.vevent a.event_ical img {
+  width: 12px;
+  height: 12px;
+}
+
+#content-core {
+  //Content Styling
+  & .documentDescription {
+    color: @OGP-color-primary;
+  }
+
+  & .callout {
+    padding: 0px 10px;
+    border-left: 1px solid @OGP-color-primary;
+    margin: 10px 50px;
+    font-size: @plone-font-size-base;
+    font-style: italic;
+    color: @OGP-color-primary;
+  }
+
+  & p {
+    color: @OGP-color-primary;
+    font-size: @plone-font-size-base;
+  }
+
+  //Table Styling
+  & table > tbody > tr > td {
+    border: 1px solid @OGP-color-primary;
+  }
+  & table {
+    font-family: @plone-font-family-condensed;
+  }
+  & th {
+    background-color: @OGP-color-primary;
+    color: white;
+    text-align: center;
+  }
+  & th,
+  td {
+    padding: 5px;
+  }
+
+  & tr:nth-child(odd) {
+    background-color: @OGP-color-light;
+  }
+
+  & tr:hover {
+    background-color: @OGP-color-secondary;
+  }
+}
+
+.event.summary {
+  float: none;
+  max-width: none;
+}

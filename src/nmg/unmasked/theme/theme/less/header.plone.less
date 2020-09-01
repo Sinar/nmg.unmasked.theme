@@ -1,0 +1,101 @@
+//Styling for header, excluding nav bar
+
+#portal-logo {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  display: block;
+  background-color: white;
+  padding: 5px;
+
+  max-width: 250px;
+  width: 50vw;
+  & img {
+    width: 100%;
+  }
+}
+
+#search-icon {
+  display: none;
+}
+
+.LSBox {
+  display: inline-flex;
+  padding: 0px 16px;
+  width: 100%;
+}
+
+#language {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  & a {
+    color: white;
+  }
+}
+
+#language li {
+  list-style-type: none;
+  margin: 2px;
+}
+
+.searchButton {
+  background-color: @plone-header-bg;
+  border: 1px solid white;
+  &:hover {
+    background-color: darken(@plone-header-bg, -15%);
+  }
+
+  & .fa {
+    color: white;
+    cursor: pointer;
+  }
+}
+
+@media (min-width: @plone-screen-sm-min) {
+  #portal-logo {
+    display: block;
+    position: static;
+  }
+
+  #search-icon {
+    display: block;
+  }
+
+  .search-dropdown {
+    display: none;
+    right: 0;
+    background-color: white;
+    position: absolute;
+    padding: 5px @plone-sitenav-padding-horizontal;
+    -webkit-box-shadow: -5px 4px 5px 0px rgba(168, 168, 168, 033);
+    -moz-box-shadow: -5px 4px 5px 0px rgba(168, 168, 168, 0.33);
+    box-shadow: -5px 4px 5px 0px rgba(168, 168, 168, 0.33);
+    border-radius: 5px 0px 5px 5px;
+    -moz-border-radius: 5px 0px 5px 5px;
+    -webkit-border-radius: 5px 0px 5px 5px;
+  }
+
+  #search {
+    position: relative;
+  }
+  .LSBox {
+    padding: 0px;
+  }
+
+  .searchButton .fa-search {
+    padding: 2px 5px;
+    font-size: @plone-font-size-base;
+  }
+  .fa-search {
+    color: white;
+    padding: 10px;
+    font-size: @plone-font-size-large;
+    cursor: pointer;
+  }
+
+  .plone-breadcrumb {
+    margin-top: 0px;
+  }
+}

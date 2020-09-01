@@ -1,0 +1,74 @@
+///Overriding of bootstrap
+
+.jumbotron {
+  background-color: @OGP-color-light;
+}
+
+.btn-primary {
+  background-color: @OGP-color-primary;
+
+  &:hover {
+    background-color: @OGP-color-secondary;
+  }
+  color: white !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  color: @OGP-color-primary;
+}
+
+.lead {
+  font-weight: bold;
+}
+
+.display-1,
+.display-2,
+.display-3,
+.display-4 {
+  font-weight: bold;
+}
+
+#section-title H5 {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 5rem;
+    font-family: @plone-font-family-sans-serif;
+}
+
+.plone-navbar {
+  background-color: #365582;
+  color: white;
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  box-shadow: none;
+}
+
+#portal-globalnav > li {
+  height: 3.125rem;
+  font-size: 2em;
+}
+
+.plone-nav li .opener + label:after {
+    display:none;
+}
+
+.plone-navbar {
+  background-color: @plone-header-bg;
+  color: white;
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  box-shadow: none;
+}
+
+#content-header {
+  background: #303981;
+  padding: 5px;
+}
